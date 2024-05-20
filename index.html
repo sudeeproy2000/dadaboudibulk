@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- 
+    - primary meta tags
+  -->
+    <title>Dada Boudi Hotel</title>
+    <meta name="title" content="Dada Boudi Hotel" />
+    <meta name="description" content="Dada Boudi Hotel Website" />
+
+    <!-- 
+    - favicon
+  -->
+    <link
+      rel="shortcut icon"
+      href="./assets/images/dadaboudi-logo.png"
+      type="image/svg+xml"
+    />
+
+    <!--Font-->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
+    <!-- 
+    - google font link
+  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Forum&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--Tailwind CSS-->
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!--
+      Swiper Css
+    -->
+
+    <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css" />
+
+    <!-- 
+    - custom css link
+  -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <!-- 
+    - preload images
+  -->
+    <link rel="preload" as="image" href="./assets/images/hero-slider-1.jpg" />
+    <link rel="preload" as="image" href="./assets/images/hero-slider-2.jpg" />
+    <link rel="preload" as="image" href="./assets/images/hero-slider-3.jpg" />
+  </head>
+
+  <body id="top">
+    <!-- 
+    - #PRELOADER
+  -->
+
+    <div class="preload" data-preaload>
+      <div class="circle"></div>
+      <p class="text">Dada Boudi</p>
+    </div>
+
+    <!-- 
+    - #TOP BAR
+  -->
+
+    <div
+      class="topbar"
+      style="background-color: white; color: black; margin-bottom: 0"
+    >
+      <div class="container">
+        <address class="topbar-item">
+          <div class="icon">
+            <ion-icon name="location-outline" aria-hidden="true"></ion-icon>
+          </div>
+
+          <span class="span">
+            1, Ghoshpara Rd, Barrackpore, West Bengal 700120
+          </span>
+        </address>
+
+        <div class="separator"></div>
+
+        <div class="topbar-item item-2">
+          <div class="icon">
+            <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+          </div>
+
+          <span class="span">Daily : 11.00 am to 11.00 pm</span>
+        </div>
+
+        <a href="tel:+91 9831318010" class="topbar-item link">
+          <div class="icon">
+            <ion-icon name="call-outline" aria-hidden="true"></ion-icon>
+          </div>
+
+          <span class="span">+91 9831318010</span>
+        </a>
+
+        <div class="separator"></div>
+
+        <a href="mailto:info@dadaboudihotel.com" class="topbar-item link">
+          <div class="icon">
+            <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
+          </div>
+
+          <span class="span">info@dadaboudihotel.com</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- 
+    - #HEADER
+  -->
+
+    <header
+      class="header"
+      style="background-color: white; color: black; padding: 0; margin-top: 0"
+      data-header
+    >
+      <div class="container" id="root">
+        <a href="#" class="logo">
+          <img
+            src="./assets/images/dadaboudi-logo.png"
+            width="160"
+            height="50"
+            alt="dadaboudi-logo - Home"
+          />
+        </a>
+
+        <nav class="navbar" id="main-nav" class="side-bar" data-navbar>
+          <button class="close-btn" aria-label="close menu" data-nav-toggler>
+            <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+          </button>
+
+          <a href="#" class="logo">
+            <img
+              src="./assets/images/dadaboudi-logo.png"
+              width="160"
+              height="50"
+              alt="dadaboudi - Home"
+            />
+          </a>
+
+          <ul class="navbar-list">
+            <li class="navbar-item">
+              <a
+                href="/"
+                class="navbar-link hover-underline active"
+                onclick="route()"
+              >
+                <div class="separator"></div>
+
+                <span class="span">Home</span>
+              </a>
+            </li>
+
+            <li class="navbar-item">
+              <a
+                href="/menu"
+                class="navbar-link hover-underline"
+                onclick="route()"
+              >
+                <div class="separator"></div>
+
+                <span class="span">Menus</span>
+              </a>
+            </li>
+
+            <li class="navbar-item">
+              <a href="#about" class="navbar-link hover-underline">
+                <div class="separator"></div>
+
+                <span class="span">About Us</span>
+              </a>
+            </li>
+
+            <li class="navbar-item">
+              <a href="#enquiry-contact" class="navbar-link hover-underline">
+                <div class="separator"></div>
+
+                <span class="span">Catering</span>
+              </a>
+            </li>
+
+            <li class="navbar-item">
+              <a href="#enquiry-contact" class="navbar-link hover-underline">
+                <div class="separator"></div>
+
+                <span class="span">Contact</span>
+              </a>
+            </li>
+          </ul>
+
+          <div class="text-center">
+            <p class="headline-1 navbar-title">Visit Us</p>
+
+            <address class="body-4">
+              1, Ghoshpara Rd, Barrackpore, <br />
+              West Bengal 700120
+            </address>
+
+            <p class="body-4 navbar-text">Open: 11.00 am - 11.00 pm</p>
+
+            <a href="info@dadaboudihotel.com" class="body-4 sidebar-link"
+              >info@dadaboudihotel.com</a
+            >
+
+            <div class="separator"></div>
+
+            <p class="contact-label">Booking Request</p>
+
+            <a
+              href="tel:+88123123456"
+              class="body-1 contact-number hover-underline"
+            >
+              +91 9831318010
+            </a>
+          </div>
+        </nav>
+
+        <a href="#enquiry-contact" class="btn btn-secondary">
+          <span class="text text-1">Enquiry</span>
+
+          <span class="text text-2" aria-hidden="true">Enquiry</span>
+        </a>
+
+        <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+          <span class="line line-1"></span>
+          <span class="line line-2"></span>
+          <span class="line line-3"></span>
+        </button>
+
+        <div class="overlay" data-nav-toggler data-overlay></div>
+      </div>
+    </header>
+
+    <main>
+      <article>
+        <!--Catering Bulk Order Banquet Booking-->
+
+        <section class="reservation" style="margin-top: 500px">
+          <div class="container">
+            <div class="form reservation-form bg-black-10">
+              <form action="" class="form-left">
+                <h2 class="headline-1 text-center">
+                  Dada Boudi Catering Service
+                </h2>
+
+                <p class="form-text text-center">
+                  Bulk Booking Enquiry contact no :
+                  <a href="tel:+919831318010" class="link"> +91 9831318010</a>
+                  or fill this form
+                </p>
+
+                <div class="input-wrapper">
+                  <input
+                    type="text"
+                    name="name"
+                    placeholder="Your Name"
+                    autocomplete="off"
+                    class="input-field"
+                  />
+
+                  <input
+                    type="tel"
+                    name="phone"
+                    placeholder="Phone Number"
+                    autocomplete="off"
+                    class="input-field"
+                  />
+                </div>
+
+                <div class="input-wrapper">
+                  <div class="icon-wrapper">
+                    <ion-icon
+                      name="restaurant-outline"
+                      aria-hidden="true"
+                    ></ion-icon>
+
+                    <select name="person" class="input-field">
+                      <option value="Catering-Service">Catering Service</option>
+                      <option value="Bulk-Order">Bulk Order</option>
+                      <option value="Banquet-Booking">Banquet Booking</option>
+                    </select>
+
+                    <ion-icon name="chevron-down" aria-hidden="true"></ion-icon>
+                  </div>
+
+                  <div class="icon-wrapper">
+                    <ion-icon
+                      name="calendar-clear-outline"
+                      aria-hidden="true"
+                    ></ion-icon>
+
+                    <input
+                      type="date"
+                      name="reservation-date"
+                      class="input-field"
+                    />
+
+                    <ion-icon name="chevron-down" aria-hidden="true"></ion-icon>
+                  </div>
+
+                  <div class="icon-wrapper">
+                    <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+
+                    <select name="person" class="input-field">
+                      <option value="08:00am">08 : 00 am</option>
+                      <option value="09:00am">09 : 00 am</option>
+                      <option value="010:00am">10 : 00 am</option>
+                      <option value="011:00am">11 : 00 am</option>
+                      <option value="012:00am">12 : 00 am</option>
+                      <option value="01:00pm">01 : 00 pm</option>
+                      <option value="02:00pm">02 : 00 pm</option>
+                      <option value="03:00pm">03 : 00 pm</option>
+                      <option value="04:00pm">04 : 00 pm</option>
+                      <option value="05:00pm">05 : 00 pm</option>
+                      <option value="06:00pm">06 : 00 pm</option>
+                      <option value="07:00pm">07 : 00 pm</option>
+                      <option value="08:00pm">08 : 00 pm</option>
+                      <option value="09:00pm">09 : 00 pm</option>
+                      <option value="10:00pm">10 : 00 pm</option>
+                    </select>
+
+                    <ion-icon name="chevron-down" aria-hidden="true"></ion-icon>
+                  </div>
+                </div>
+
+                <textarea
+                  name="message"
+                  placeholder="Message"
+                  autocomplete="off"
+                  class="input-field"
+                ></textarea>
+
+                <button type="submit" class="btn btn-secondary">
+                  <span class="text text-1">Send Enquiry</span>
+
+                  <span class="text text-2" aria-hidden="true"
+                    >Send Enquiry</span
+                  >
+                </button>
+              </form>
+
+              <div
+                class="form-right text-center"
+                style="
+                  background-image: url('./assets/images/form-pattern.png');
+                "
+              >
+                <h2 class="headline-1 text-center">Contact Us</h2>
+
+                <p class="contact-label">Bulk Booking</p>
+
+                <a
+                  href="tel:+919831318010"
+                  class="body-1 contact-number hover-underline"
+                  >+91 9831318010</a
+                >
+
+                <div class="separator"></div>
+
+                <p class="contact-label">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1839.5592099191003!2d88.36948135871634!3d22.760986169250497!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f89a5183d3d423%3A0xb1e418746aa037e9!2sDada%20Boudi%20Hotel!5e0!3m2!1sen!2sin!4v1716207423492!5m2!1sen!2sin"
+                    width="300"
+                    height="300"
+                    style="border: 0"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                  ></iframe>
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </article>
+    </main>
+
+    <!-- 
+    - #FOOTER
+  -->
+
+    <footer
+      class="footer section has-bg-image text-center"
+      style="background-image: url('./assets/images/footer-bg.jpg')"
+    >
+      <div class="container">
+        <div class="footer-top grid-list">
+          <div class="footer-brand has-before has-after">
+            <a href="#" class="logo">
+              <img
+                src="./assets/images/dadaboudi-logo.png"
+                width="320"
+                height="100"
+                loading="lazy"
+                alt="dada boudi home"
+              />
+            </a>
+
+            <address class="body-4">
+              1, Ghoshpara Rd, Barrackpore, West Bengal 700120
+            </address>
+
+            <a href="info@dadaboudihotel.com" class="body-4 contact-link"
+              >info@dadaboudihotel.com</a
+            >
+
+            <a href="tel:+919831318010" class="body-4 contact-link"
+              >Booking Request : +91 9831318010</a
+            >
+
+            <p class="body-4">Open : 11:00 am - 11:00 pm</p>
+
+            <div class="wrapper">
+              <div class="separator"></div>
+              <div class="separator"></div>
+              <div class="separator"></div>
+            </div>
+
+            <p class="title-1">Get News & Offers</p>
+
+            <p class="label-1">
+              Subscribe us & Get <span class="span">Exclusive discounts.</span>
+            </p>
+
+            <form action="" class="input-wrapper" id="subscribe_form">
+              <div class="icon-wrapper">
+                <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
+
+                <input
+                  type="email"
+                  name="subscriber_name"
+                  placeholder="Your email"
+                  autocomplete="off"
+                  class="input-field"
+                  id="subscriber_name"
+                />
+              </div>
+
+              <button
+                type="submit"
+                class="btn btn-secondary"
+                id="subscribe_button"
+              >
+                <span class="text text-1">Subscribe</span>
+
+                <span class="text text-2" aria-hidden="true">Subscribe</span>
+              </button>
+            </form>
+          </div>
+
+          <ul class="footer-list">
+            <li>
+              <a href="#home" class="label-2 footer-link hover-underline"
+                >Home</a
+              >
+            </li>
+
+            <li>
+              <a href="#menu" class="label-2 footer-link hover-underline"
+                >Menus</a
+              >
+            </li>
+
+            <li>
+              <a href="#about" class="label-2 footer-link hover-underline"
+                >About Us</a
+              >
+            </li>
+
+            <li>
+              <a
+                href="#enquiry-contact"
+                class="label-2 footer-link hover-underline"
+                >Enquiry</a
+              >
+            </li>
+
+            <li>
+              <a
+                href="#enquiry-contact"
+                class="label-2 footer-link hover-underline"
+                >Contact</a
+              >
+            </li>
+          </ul>
+
+          <ul class="footer-list">
+            <li>
+              <a
+                href="https://www.facebook.com/officialdadaboudihotel?mibextid=LQQJ4d"
+                target="_blank"
+                class="label-2 footer-link hover-underline"
+                >Facebook</a
+              >
+            </li>
+
+            <li>
+              <a
+                href="https://www.instagram.com/dadaboudihotelofficial/"
+                target="_blank"
+                class="label-2 footer-link hover-underline"
+                >Instagram</a
+              >
+            </li>
+
+            <li>
+              <a
+                href="https://twitter.com/dadaboudi1963"
+                target="_blank"
+                class="label-2 footer-link hover-underline"
+                >Twitter</a
+              >
+            </li>
+
+            <li>
+              <a
+                href="https://www.youtube.com/@DadaBoudiHotelOfficial"
+                target="_blank"
+                class="label-2 footer-link hover-underline"
+                >Youtube</a
+              >
+            </li>
+
+            <li>
+              <a
+                href="https://maps.app.goo.gl/t1a5GCTBYUQfF4Xe8"
+                target="_blank"
+                class="label-2 footer-link hover-underline"
+                >Google Map</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-bottom">
+          <p class="copyright">
+            &copy; 2024 Dada Boudi Hotel. All Rights Reserved | Crafted by
+            <a href="https://www.rvssgroup.com/" target="_blank" class="link"
+              >RVSS PVT Ltd.</a
+            >
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- 
+    - #BACK TO TOP
+  -->
+
+    <a
+      href="#top"
+      class="back-top-btn active"
+      aria-label="back to top"
+      data-back-top-btn
+    >
+      <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
+    </a>
+
+    <!-- 
+    - custom js link
+  -->
+
+    <script src="./assets/js/swiper-bundle.min.js"></script>
+
+    <!-- 
+    - custom js link
+  -->
+    <script src="./assets/js/script.js"></script>
+
+    <!-- 
+    - ionicon link
+  -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+
+    <script type="text/javascript">
+      emailjs.init("9GXzUSKDbifoGFlH_");
+    </script>
+  </body>
+</html>
